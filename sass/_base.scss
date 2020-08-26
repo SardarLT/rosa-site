@@ -15,4 +15,33 @@ body {
     box-sizing: border-box;
     font-family: $body-font;
     color: $body-font-color;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+section {
+    padding: 7.9rem;
+}
+
+.padding-right {
+    padding-right: 7.9rem;
 }

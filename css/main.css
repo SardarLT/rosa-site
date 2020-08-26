@@ -18,5 +18,441 @@ body {
           box-sizing: border-box;
   font-family: "Cabin", sans-serif;
   color: #515151;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+section {
+  padding: 7.9rem;
+}
+
+.padding-right {
+  padding-right: 7.9rem;
+}
+
+.header-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.header__nav {
+  width: 50%;
+}
+
+.header__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header__link {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.header__link:hover {
+  color: #c59d5f;
+}
+
+.active {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.first-letter {
+  text-transform: uppercase;
+  font-size: 12.2rem;
+}
+
+.headline {
+  font-size: 10rem;
+  font-family: "Herr Von Muellerhoff", cursive;
+  color: #c59d5f;
+  font-weight: 100;
+  line-height: .4;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-animation: fadeUp .5s forwards;
+          animation: fadeUp .5s forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.sub-headline {
+  color: white;
+  font-size: 4.7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .5rem;
+  margin-right: -.5rem;
+  -webkit-animation: scale .5s forwards;
+          animation: scale .5s forwards;
+}
+
+.headline-description h5 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+}
+
+.separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.asterisk {
+  color: #c59d5f;
+  font-size: 1.2rem;
+  margin: 0 1.6rem;
+  opacity: 0;
+  -webkit-animation: spin .5s forwards;
+          animation: spin .5s forwards;
+  -webkit-animation-delay: .7;
+          animation-delay: .7;
+}
+
+.line {
+  width: 100%;
+  max-width: 11.4rem;
+  height: .25rem;
+  background-color: white;
+  position: relative;
+  opacity: 0;
+  -webkit-animation: grow 2s forwards;
+          animation: grow 2s forwards;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+.line-right::before,
+.line-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: .6rem solid transparent;
+  opacity: 0;
+  -webkit-animation: grow .5s forwards;
+          animation: grow .5s forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.line-right::before {
+  border-right-color: white;
+  right: 0;
+}
+
+.line-left::before {
+  border-left-color: white;
+  left: 0;
+}
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: white;
+  padding: .9rem 1.8rem;
+  color: #515151;
+  border-radius: .4rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  color: white;
+  background-color: #c59d5f;
+}
+
+.single-animation {
+  opacity: 0;
+  -webkit-animation: fadeUp .5s forwards;
+          animation: fadeUp .5s forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.dark {
+  color: #252525;
+  letter-spacing: .7rem;
+  margin-right: -.7rem;
+}
+
+.global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+.discover .global-headline {
+  margin-top: 6.9rem;
+}
+
+.global-headline .asterisk {
+  color: #515151;
+  margin: 2.4rem 0;
+}
+
+.discover-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.discover__text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.discover__text p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.global-headline .headline {
+  letter-spacing: -.1px;
+  line-height: .42;
+}
+
+.discover-flex > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.body-btn {
+  font-size: 1.5rem;
+  color: #c59d5f;
+  position: relative;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.body-btn::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  background-color: #c59d5f;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.body-btn:hover,
+.body-btn:focus {
+  color: #252525;
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+  background-color: #252525;
+}
+
+.tasteful {
+  background: url("../img/tasteful-recipes.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.between {
+  min-height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */
